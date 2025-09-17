@@ -16,7 +16,8 @@ const Login = () => {
       // Dynamic page title
       document.title = 'Login - Employee Hierarchy';
     }
-  }, [navigate, user]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleLoginSuccess = (userData: User) => {
     // Store user data in session storage (for pseudo-authentication)

@@ -14,12 +14,16 @@ const Hierarchy = () => {
     const fetchData = async () => {
       const fetchedUsers = await fetchAllUsers();
       const sortedUsers = [] as User[];
+
+      const userMap: { [key: number]: User } = {};
+      fetchedUsers.forEach(user => userMap[user.id] = user);
+
       // Build hierarchy by assigning reports to their managers
       fetchedUsers.forEach((user: User) => {
         if (!user.managerId) {
           sortedUsers.push(user);
         } else {
-          const manager = fetchedUsers.find((u: User) => u.id === user.managerId);
+          const manager = userMap[user.managerId];
           if (manager) {
             if (!manager.reports) manager.reports = [];
             manager.reports.push(user);
