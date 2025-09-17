@@ -1,5 +1,9 @@
 # Gong Exercise - Employee Hierarchy Viewer
 
+## UPDATE
+
+I found a time complexity issue with how users were being sorted for the hierarchy tree. As I have already submitted this repo for review, I have the change in a Pull Request here <https://github.com/nikkistorme/employee-hierarchy/pull/1>.
+
 ## Setup Instructions
 
 1. Clone the repository
