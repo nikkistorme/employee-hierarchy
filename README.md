@@ -12,7 +12,7 @@
 3. Create a `.env` file in the root directory and update the following variable with the Firebase URL (just in case, I'm not exposing the URL directly in the code for security reasons):
 
    ```bash
-   VITE_API_URL=https://example_subdomain.firebaseio.com
+   VITE_FIREBASE_BASE_URL=https://example_subdomain.firebaseio.com
    ```
 
 4. Start the development server
