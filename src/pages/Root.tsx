@@ -11,8 +11,12 @@ function Root() {
     // If not logged in, redirect to login page
     if (!user) {
       navigate("/login", { replace: true });
+    } else {
+      // Dynamic page title
+      document.title = 'Employee Hierarchy';
     }
-  })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // While redirecting, don't render anything
   if (!user) return null;
